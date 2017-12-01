@@ -1,11 +1,10 @@
 import m from 'mithril'
-let path = window.location.pathname.replace('/index.html', '')
 let Plan = {
     list: [],
     map: {},
     loadList: () => m.request({
         method: "GET",
-        url: path + "/plan",
+        url: "/plan",
         withCredentials: true
     }).then(result => {
         Plan.list = result
@@ -14,14 +13,14 @@ let Plan = {
     current: {},
     load: id => m.request({
         method: "GET",
-        url: path + "/plan/" + id,
+        url: "/plan/" + id,
         withCredentials: true
     }).then(result => {
         Plan.current = result
     }),
     create: plan => m.request({
         method: "POST",
-        url: path + "/plan",
+        url: "/plan",
         withCredentials: true,
         data: JSON.stringify(plan)
     })

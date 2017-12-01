@@ -1,11 +1,10 @@
 import m from 'mithril'
-let path = window.location.pathname.replace('/index.html', '')
 let Key = {
     list: [],
     loadList: () => {
         return m.request({
             method: "GET",
-            url: path + "/key",
+            url: "/key",
             withCredentials: true
         })
         .then(result => {
@@ -14,20 +13,20 @@ let Key = {
     },
     create: plan => m.request({
         method: "POST",
-        url: path + "/key/" + plan,
+        url: "/key/" + plan,
         withCredentials: true
     }),
     changePlan: (key, plan) => {
         return m.request({
             method: "PUT",
-            url: path + "/key/" + key + "/" + plan,
+            url: "/key/" + key + "/" + plan,
             withCredentials: true
         })
     },
     disable: key => {
         return m.request({
             method: "DELETE",
-            url: path + "/key/" + key,
+            url: "/key/" + key,
             withCredentials: true
         })
     }

@@ -12,7 +12,7 @@ export default {
                 m("th", "")
             ])),
             m("tbody", Plan.list.map(plan => m("tr", {onclick: () => {
-                m.route.set("/plan/" + plan.key)
+                m.route.set("/plans/" + plan.key)
             }}, [
                 m("td", {'data-th': 'ID'}, plan.key),
                 m("td", {'data-th': 'Name'}, plan.name),

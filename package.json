@@ -5,8 +5,7 @@
   "author": "Dave Morton",
   "license": "ISC",
   "scripts": {
-	"build": "rollup",
-    "watch": "node watch.js",
+    "watch": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -27,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/DaveM2011/ApiKeys.git"
+    "url": "git://github.com/arangodb/foxx-api-keys.git"
   },
   "dependencies": {
     "mithril": "^1.1.5"

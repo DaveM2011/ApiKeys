@@ -7,12 +7,12 @@ import PlanDetails from './views/plan'
 import NewKey from './views/newkey'
 import KeyList from './views/keylist'
 import EditKey from './views/editkey'
-
+m.route.prefix('')
 m.route(document.body, '/', {
     '/': {
         render: () => m(Layout, m(PlanList))
     },
-    '/plan/:plan': {
+    '/plans/:plan': {
         render: vnode => m(Layout, m(PlanDetails, vnode.attrs))
     },
     '/newplan': {

@@ -53,11 +53,13 @@ body {
 
 table.table {
     &.hover {
-        tr {
-            &:hover {
-                td,
-                th {
-                    background: #222;
+        tbody {
+            tr {
+                &:hover {
+                    td,
+                    th {
+                        background: #222;
+                    }
                 }
             }
         }
