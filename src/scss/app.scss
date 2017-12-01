@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "compass";
+@import "framy/framy";
+
+$white: white;
+$black: black;
+$dark-color: #171717;
+$dark-color2: #191919;
+$dark-color3: #212121;
+$red-color: #B21722;
+$red-color-dark: #840D15;
+$green-color: rgb(23, 178, 23);
+$green-color-dark: rgb(23, 132, 13);
+
+body, html {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background: $dark-color;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    @include filter-gradient(#171717, #1d1d1d, horizontal); // IE6-9 fallback on horizontal gradient
+    @include background-image(repeating-linear-gradient(300deg, #1d1d1d 0%,#1d1d1d 30%,#1a1a1a 30%,#1a1a1a 65%,#171717 65%,#171717 100%));
+}
+
+.main {
+    width: 100%;
+}
+
+.head {
+    margin-bottom: 1em;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.form-field {
+    background-color: #222;
+    border: 1px solid rgb(99, 99, 99);
+    color: #f6f6f6;
+}
+
+table.table {
+    &.hover {
+        tr {
+            &:hover {
+                td,
+                th {
+                    background: #222;
+                }
+            }
+        }
+    }
+}
