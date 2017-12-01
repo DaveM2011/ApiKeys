@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/arangodb/foxx-api-keys.git"
+    "url": "git://github.com/DaveM2011/ApiKeys.git"
   },
   "dependencies": {
     "mithril": "^1.1.5"
